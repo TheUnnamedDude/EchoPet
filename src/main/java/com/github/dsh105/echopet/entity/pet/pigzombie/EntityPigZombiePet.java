@@ -1,8 +1,8 @@
 package com.github.dsh105.echopet.entity.pet.pigzombie;
 
-import net.minecraft.server.v1_6_R2.Item;
-import net.minecraft.server.v1_6_R2.ItemStack;
-import net.minecraft.server.v1_6_R2.World;
+import net.minecraft.server.v1_6_R3.Item;
+import net.minecraft.server.v1_6_R3.ItemStack;
+import net.minecraft.server.v1_6_R3.World;
 
 import org.bukkit.scheduler.BukkitRunnable;
 

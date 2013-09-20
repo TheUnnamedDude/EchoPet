@@ -21,7 +21,8 @@ public class PetGoalFloat extends PetGoal {
 	public void tick() {
 		//https://github.com/Bukkit/mc-dev/blob/master/net/minecraft/server/PathfinderGoalFloat.java#L18
 		//a.aB() - 1.6.1
-		if (pet.aC().nextFloat() < 0.8F) {
+        // 1.6.4 aC() -> aD()
+		if (pet.aD().nextFloat() < 0.8F) {
 			this.pet.getControllerJump().a();
 		}
 	}

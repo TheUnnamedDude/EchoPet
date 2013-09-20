@@ -1,7 +1,7 @@
 package com.github.dsh105.echopet.entity.pathfinder.goals;
 
-import net.minecraft.server.v1_6_R2.Entity;
-import net.minecraft.server.v1_6_R2.EntityHuman;
+import net.minecraft.server.v1_6_R3.Entity;
+import net.minecraft.server.v1_6_R3.EntityHuman;
 
 import com.github.dsh105.echopet.entity.pathfinder.PetGoal;
 import com.github.dsh105.echopet.entity.pet.EntityPet;
@@ -34,7 +34,8 @@ public class PetGoalLookAtPlayer extends PetGoal {
 	public boolean shouldStart() {
 		//https://github.com/Bukkit/mc-dev/blob/master/net/minecraft/server/PathfinderGoalLookAtPlayer.java#L29
 		//a.aB() - 1.6.1
-		if (this.pet.aC().nextFloat() >= this.chance) {
+        // 1.6.4 aC() -> aD()
+		if (this.pet.aD().nextFloat() >= this.chance) {
 			return false;
 		}
 		else if (this.pet.passenger != null) {
@@ -57,7 +58,7 @@ public class PetGoalLookAtPlayer extends PetGoal {
 	}
 	
 	public void c() {
-		this.ticksLeft = 40 + this.pet.aC().nextInt(40);
+		this.ticksLeft = 40 + this.pet.aD().nextInt(40);
 	}
 
 	public void d() {

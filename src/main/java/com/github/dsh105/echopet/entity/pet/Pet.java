@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import com.github.dsh105.echopet.api.event.PetTeleportEvent;
 import com.github.dsh105.echopet.entity.pet.enderdragon.EntityEnderDragonPet;
 import com.github.dsh105.echopet.util.Lang;
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
+import net.minecraft.server.v1_6_R3.*;
+import org.bukkit.craftbukkit.v1_6_R3.*;
+import org.bukkit.craftbukkit.v1_6_R3.entity.CraftPlayer;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;

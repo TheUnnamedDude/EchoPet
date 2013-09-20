@@ -2,7 +2,7 @@ package com.github.dsh105.echopet.entity.pet.magmacube;
 
 import com.github.dsh105.echopet.EchoPet;
 import com.github.dsh105.echopet.util.Particle;
-import net.minecraft.server.v1_6_R2.World;
+import net.minecraft.server.v1_6_R3.World;
 
 import com.github.dsh105.echopet.entity.pet.EntityPet;
 import com.github.dsh105.echopet.entity.pet.Pet;
@@ -65,7 +65,8 @@ public class EntityMagmaCubePet extends EntityPet {
 		if (this.onGround && this.jumpDelay-- <= 0) {
 			this.jumpDelay = this.bL();
 			if (this.bO()) {
-				this.makeSound(this.aO(), this.aZ(), ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) * 0.8F);
+                // 1.6.4 aZ() -> ba()
+				this.makeSound(this.aO(), this.ba(), ((this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F) * 0.8F);
 			}
 			getControllerJump().a();
 		}
@@ -89,9 +90,10 @@ public class EntityMagmaCubePet extends EntityPet {
 	protected int bL() {
 		return this.random.nextInt(15) + 10;
 	}
-	
+
+    // 1.6.4 aZ() > ba()
 	@Override
-	protected float aZ() {
+	protected float ba() {
 		return 0.4F * (float) this.getSize();
 	}
 	

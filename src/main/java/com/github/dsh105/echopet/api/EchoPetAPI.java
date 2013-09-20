@@ -9,7 +9,7 @@ import com.github.dsh105.echopet.entity.pathfinder.goals.PetGoalFollowOwner;
 import com.github.dsh105.echopet.entity.pathfinder.goals.PetGoalLookAtPlayer;
 import com.github.dsh105.echopet.util.Lang;
 import com.github.dsh105.echopet.util.StringUtil;
-import net.minecraft.server.v1_6_R2.EntityHuman;
+import net.minecraft.server.v1_6_R3.EntityHuman;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;

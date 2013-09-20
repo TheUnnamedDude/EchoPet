@@ -20,7 +20,8 @@ public class PetGoalRandomLookaround extends PetGoal {
 		}
 		//https://github.com/Bukkit/mc-dev/blob/master/net/minecraft/server/PathfinderGoalRandomLookaround.java#L16
 		//a.aB() - 1.6.1
-		return this.pet.aC().nextFloat() < 0.2F;
+        // 1.6.4 aC() -> aD()
+		return this.pet.aD().nextFloat() < 0.2F;
 	}
 	
 	@Override
@@ -30,12 +31,14 @@ public class PetGoalRandomLookaround extends PetGoal {
 	
 	@Override
 	public void start() {
-		double d0 = 6.283185307179586D * this.pet.aC().nextDouble();
+        // 1.6.4 aC() -> aD()
+		double d0 = 6.283185307179586D * this.pet.aD().nextDouble();
 		this.xDir = Math.cos(d0);
 		this.zDir = Math.sin(d0);
 		//https://github.com/Bukkit/mc-dev/blob/master/net/minecraft/server/PathfinderGoalRandomLookaround.java#L28
 		//a.aB() - 1.6.1
-		this.ticksUntilStop = 20 + this.pet.aC().nextInt(20);
+        // 1.6.4 aC() -> aD()
+		this.ticksUntilStop = 20 + this.pet.aD().nextInt(20);
 	}
 	
 	@Override

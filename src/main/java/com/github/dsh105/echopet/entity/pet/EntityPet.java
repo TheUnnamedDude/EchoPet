@@ -11,12 +11,12 @@ import com.github.dsh105.echopet.data.PetHandler;
 import com.github.dsh105.echopet.data.PetType;
 import com.github.dsh105.echopet.util.Particle;
 import com.github.dsh105.echopet.util.ReflectionUtil;
-import net.minecraft.server.v1_6_R2.*;
+import net.minecraft.server.v1_6_R3.*;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_6_R2.CraftWorld;
-import org.bukkit.craftbukkit.v1_6_R2.entity.CraftEntity;
-import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_6_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_6_R3.entity.CraftEntity;
+import org.bukkit.craftbukkit.v1_6_R3.entity.CraftPlayer;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
@@ -131,8 +131,10 @@ public abstract class EntityPet extends EntityCreature implements IMonster {
 	}
 	
 	//bb() - 1.6.1
+    //bf() - 1.6.4
+
 	@Override
-	public boolean be() {return true;}
+	public boolean bf() {return true;}
 
 	@Override
 	protected String r() {
@@ -156,12 +158,12 @@ public abstract class EntityPet extends EntityCreature implements IMonster {
 	//1.6.1 - EntityInsentient
 	//be() - 1.6.1
 	@Override
-	protected void bh() {
+	protected void bi() {
 		//++this.bC; - 1.5.2 age
 		++this.aV; //1.6 age
 		//this.world.methodProfiler.a("checkDespawn");
 		
-		this.bo(); //bo() - 1.6.1
+		this.bp(); //bo() - 1.6.1
 		//this.world.methodProfiler.b();
 		
 		//this.world.methodProfiler.a("sensing");
